@@ -19,13 +19,15 @@ const Container = styled.div`
     position: relative;
 `
 
-export function CartControl(){
-    const { value } = useLocalStorage('cart-items', [])
+export function CartControl() {
+    const { value } = useLocalStorage('cart-items', []);
+
+    const cartItemCount = value && value.length ? value.length : 0;
 
     return (
         <Container>
-            <CartIcon/>
-            {value.length && <CartCount>{value.length}</CartCount>}
+            <CartIcon />
+            {cartItemCount > 0 && <CartCount>{cartItemCount}</CartCount>}
         </Container>
-    )
+    );
 }
