@@ -25,9 +25,9 @@ const FilterItem = styled.li<FilterItemProps>`
   font-weight: ${(props) => (props.selected ? "600" : "400")};
   font-family: inherit;
   cursor: pointer;
+  transition: all 0.1s ease-in;
   border-bottom: ${(props) =>
     props.selected ? "4px solid var(--orange-low)" : ""};
-    transition: ease-out 0.1s;
 `;
 
 export function FilterByType() {
