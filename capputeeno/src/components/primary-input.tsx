@@ -3,7 +3,7 @@ import { SearchIcon } from "./icons/search-icon";
 import { InputHTMLAttributes } from "react";
 
 export const PrimaryInput = styled.input`
-    width: 352px;
+    width: 100%;
     border: none;
     border-radius: 8px;
     background-color: var(--bg-secondary);
@@ -17,13 +17,17 @@ export const PrimaryInput = styled.input`
 
 const InputContainer = styled.div`
     position: relative;
-    width: 352px;
+    width: 250px;
 
     svg{
         position: absolute;
         right: 20px;
         top: 50%;
         transform: translateY(-50%)
+    }
+
+    @media (min-width: 768px){
+      width: 352px;
     }
 `
 
